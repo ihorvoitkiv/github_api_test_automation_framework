@@ -28,7 +28,6 @@ def log_request(func):
             return response
         except Exception as e:
             logging.error(f"Error requesting {request_method}: {e}")
-            raise
         finally:
             logging.info(f"{'=' * 100}\n")
 
