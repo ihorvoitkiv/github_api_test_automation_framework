@@ -57,13 +57,14 @@ def test_create_pull_request(session):
 
 
 def test_approve_pull_request(session):
-    # ToDo: Here should be test precondition
+    # ToDo: "errors":["Can not approve your own pull request"]
+    # ToDo: Add test precondition via commit and pull request
     response = PullsAPI(session).approve_pr(owner, repo, pull_number=7)
     assert response.status_code == 200
     assert response.json()["state"] == "APPROVED"
 
 
 def test_delete_pull_request(session):
-    # ToDo: clarify endpoint doc
+    # ToDo: need clarify endpoint doc
     response = PullsAPI(session).delete_pr(owner, repo, pull_number=7)
     assert response.status_code == 204
