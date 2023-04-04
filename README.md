@@ -38,7 +38,6 @@ BEFORE START
 3. Open PyCharm and clone github_rest_api_test_framework from GitHub
 4. Go to github_rest_api_test_framework project root folder and install all requirements from requirements.txt file into virtual env via Pycharm GUI helper <br/>
 or Terminal: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
-https://gitlab.com/neuroflow1/qa-mobile-automation
 5. Check configs:
 <br/>config.ini<br/>
 "base_url" - default base url of GitHub REST API<br/>
