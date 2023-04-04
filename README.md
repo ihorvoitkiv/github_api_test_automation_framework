@@ -25,7 +25,7 @@ src/data - Directory  with test data files<br/>
 <br/>
 
 test_api - Directory with api test files<br/>
-test_api/test_services.py - File with services test functions<br/>
+test_api/test_service.py - File with services test functions<br/>
 test_api/conftest.py - File with pytest fixtures<br/>
 
 
