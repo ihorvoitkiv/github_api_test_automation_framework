@@ -4,9 +4,11 @@ import requests
 from config_reader import Config
 
 
-@pytest.fixture(scope='session')
-def session():
-    return requests.Session()
+@pytest.fixture(scope="function")
+def session() -> requests.Session:
+    session = requests.Session()
+    yield session
+    session.close()
 
 
 @pytest.fixture(scope='session')
