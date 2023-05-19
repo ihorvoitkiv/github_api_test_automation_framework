@@ -63,3 +63,4 @@ class RequestAPI:
     @log_request
     def delete(self, url: str, headers: dict = None, *args, **kwargs) -> requests.Response:
         return self.session.delete(url, headers=headers, *args, **kwargs)
+
