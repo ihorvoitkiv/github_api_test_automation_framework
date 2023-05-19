@@ -44,25 +44,12 @@ class RequestAPI:
         Args:
             session (requests.Session): A requests.Session object allows persistence of certain parameters,
             such as headers or cookies, across multiple requests made with this RequestAPI instance.
-        The session object is created via a pytest session fixture in the conftest.py module.
+            The session object is created via a pytest session fixture in the conftest.py module.
         """
         self.session = session
 
     @log_request
     def get(self, url: str, params: dict = None, headers: dict = None, *args, **kwargs) -> requests.Response:
-        """
-        Send a GET request with optional parameters and headers.
-
-        Args:
-            url: The URL to send the GET request to.
-            params: The parameters to include in the request URL. Defaults to None.
-            headers: The headers to include in the request. Defaults to None.
-            *args: Variable length argument list.
-            **kwargs: Arbitrary keyword arguments.
-
-        Returns:
-            requests.Response: The response object from the GET request.
-        """
         return self.session.get(url, params=params, headers=headers, *args, **kwargs)
 
     @log_request
